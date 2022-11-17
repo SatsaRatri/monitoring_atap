@@ -1,20 +1,23 @@
 
 @include('admin.partials.head')
-<body class="bg-gradient-primary">
+<body >
+    <div class="bg-holder overlay parallax" style="background-image:url('https://www.ptmdr.co.id/assets/landing/img/VAL07862-SMALL-Recovered.jpg');" data-rellax-percentage="0.5">
 
     <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-10 col-lg-10 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block ">
-                                <img class="col-md img-center" src="{{asset('template/img/mdr-logo.svg')}}">
+                            <div class="col-lg-6 mt-5 d-none d-lg-block ">
+                                <div class="mt-5 ml-5 pl-5" style="width:18rem; ">
+                                <img class="col-sm card-img-center" src="{{asset('template/img/mdr-logo.svg')}}">
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
