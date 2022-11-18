@@ -15,16 +15,21 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', [LoginController::class, 'login'])->name('login');
-// Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 
-// Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard')->middleware('auth');
-// Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
-// Route::get('/', function () {
-//     return view('admin.profil');
-// });
+
 
 Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'login'])->name('');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+//     Route::get('/dashboard',[DataIotController::class,'dashboard'])->name('datasensor.dashboard');
+//     Route::get('/',[DataIotController::class,'dashboard'])->name('datasensor.dashboard');
+//     Route::get('/sensor',[DataIotController::class,'sensor'])->name('datasensor.sensor');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
-Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+// Route::get('/profil', [AdminController::class, 'profil'])->name('profil');
+// Route::get('/basispengetahuan', [AdminController::class, 'basispengetahuan'])->name('basispengetahuan');
+// Route::get('/basispengetahuan/tambah', [AdminController::class, 'tambahbasispengetahuan'])->name('basispengetahuan.tambahbasispengetahuan');
+// Route::get('/basispengetahuan/{id_basispengetahuan}', [AdminController::class, 'editbasispengetahuan'])->name('basispengetahuan.edit');
+// Route::put('/basispengetahuan/{id_basispengetahuan}', [AdminController::class, 'updatebasispengetahuan'])->name('update.basispengetahuan');
+// Route::get('/basispengetahuan', [Controller::class, 'editbasispengetahuan'])->name('editbasispengetahuan');
+});

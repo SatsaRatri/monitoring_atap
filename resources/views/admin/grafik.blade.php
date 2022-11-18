@@ -1,45 +1,45 @@
 @extends('admin.partials.master')
 @section('content')
 <div class="container-fluid">
-<div class="row ">
-<!-- Area Chart -->
-<div class="card shadow col-md-6 my-2 ">
-    <div class="card-header py-4">
+  <div class="row ">
+    <!-- Area Chart -->
+    <div class="card shadow col-md-6 my-2 ">
+      <div class="card-header py-4">
         <h6 class="m-0 font-weight-bold text-primary">Chart Suhu</h6>
-    </div>
-    <div class="card-body col-12">
+      </div>
+      <div class="card-body col-12">
         <div class="chart-area">
-            <canvas id="myAreaChart"></canvas>
+          <canvas id="myAreaChart"></canvas>
         </div>
+      </div>
     </div>
-</div>
-<div class="card shadow col-md-6 my-2 ">
-    <div class="card-header py-4">
+    <div class="card shadow col-md-6 my-2 ">
+      <div class="card-header py-4">
         <h6 class="m-0 font-weight-bold text-primary">Chart Cahaya</h6>
-    </div>
-    <div class="card-body col-12">
+      </div>
+      <div class="card-body col-12">
         <div class="chart-area">
-            <canvas id="myAreaChart1"></canvas>
+          <canvas id="myAreaChart1"></canvas>
         </div>
+      </div>
     </div>
-</div>
-{{-- <div class="card shadow col-md ">
-    <div class="card-header py-4">
-        <h6 class="m-0 font-weight-bold text-primary" > Chart Kalman Filter</h6>
-    </div>
-    <div class="card-body col-12">
+    {{-- <div class="card shadow col-md ">
+      <div class="card-header py-4">
+        <h6 class="m-0 font-weight-bold text-primary"> Chart Kalman Filter</h6>
+      </div>
+      <div class="card-body col-12">
         <div class="chart-area">
-            <canvas id="myAreaChart2"></canvas>
+          <canvas id="myAreaChart2"></canvas>
         </div>
-    </div>
-</div> --}}
-</div>
+      </div>
+    </div> --}}
+  </div>
 </div>
 
 @endsection
 @push('extraJS')
 <script type="text/javascript">
-    // Set new default font family and font color to mimic Bootstrap's default styling
+  // Set new default font family and font color to mimic Bootstrap's default styling
 
 
 function number_format(number, decimals, dec_point, thousands_sep) {

@@ -1,15 +1,15 @@
 @extends('admin.partials.master')
 @section('content')
-  <!-- Begin Page Content -->
-  <div class="container-fluid">
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-    
+
     <!-- DataTales Example -->
     <div class="card shadow mb-8">
         <div class="card-header py-12">
             <div class="d-flex flex-row align-items-center ">
-            <h6 class="m-0 font-weight-bold text-primary">Data Tabel</h6>
-            <button class="fas fa-calendar-alt fa-2x text-gray-700 border-0 ml-auto"></button>
+                <h6 class="m-0 font-weight-bold text-primary">Data Tabel</h6>
+                <button class="fas fa-calendar-alt fa-2x text-gray-700 border-0 ml-auto"></button>
             </div>
         </div>
         <div class="card-body">
@@ -23,7 +23,7 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                         <tr>
                             <td>Tiger Nixon</td>
@@ -372,7 +372,7 @@
             </div>
         </div>
     </div>
- 
+
 </div>
 <!-- /.container-fluid -->
 @endsection
