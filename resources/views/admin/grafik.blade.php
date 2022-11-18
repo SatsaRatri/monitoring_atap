@@ -23,7 +23,7 @@
         </div>
     </div>
 </div>
-<div class="card shadow col-md ">
+{{-- <div class="card shadow col-md ">
     <div class="card-header py-4">
         <h6 class="m-0 font-weight-bold text-primary" > Chart Kalman Filter</h6>
     </div>
@@ -32,7 +32,7 @@
             <canvas id="myAreaChart2"></canvas>
         </div>
     </div>
-</div>
+</div> --}}
 </div>
 </div>
 

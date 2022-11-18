@@ -34,7 +34,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link " href="#" >
+    <a class="nav-link " href="admin.basispengetahuan" >
         <i class="fas fa-fw fa-folder"></i>
         <span>Basis Pengetahuan</span>
     </a>
@@ -49,7 +49,7 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="">
         <i class="fas fa-fw fa-table"></i>
         <span>Table</span></a>
 </li>

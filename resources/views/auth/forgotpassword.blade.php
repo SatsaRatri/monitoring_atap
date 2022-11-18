@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-lg-6 mt-5 d-none d-lg-block ">
                                 <div class="mt-5 ml-5 pl-5" style="width:18rem; ">
-                                <img class="col-sm card-img-center" src="{{asset('template/img/mdr-logo.svg')}}">
+                                    <img class="col-sm card-img-center" src="{{asset('template/img/mdr-logo.svg')}}">
                                 </div>
                             </div>
                             <div class="col-lg-6">

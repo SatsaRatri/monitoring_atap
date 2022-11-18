@@ -19,7 +19,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Suhu</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">-- C</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">-- °C</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-temperature-high fa-2x text-gray-300"></i>
@@ -37,7 +37,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Cahaya</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">--</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">-- FC</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-lightbulb fa-2x text-gray-300"></i>
