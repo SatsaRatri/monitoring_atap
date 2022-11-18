@@ -17,7 +17,7 @@
 
                         <div class="col-xl-5 ">
                             <!-- Profile picture card-->
-                            <div class="card mb-4 mb-xl-0  align-items-center ">
+                            <div  class="card mb-6  align-items-center" style="height: 20rem;">
                                 <div class="card-header">Profile Picture</div>
                                 <div class="card-body text-center mx-5 my-5">
                                     <!-- Profile picture image-->
@@ -33,9 +33,10 @@
                         <!-- Form Group (deskripsi)-->
                         <div class="col-xl-7 ">
                             <!-- Profile picture card-->
-                            <div class="card mb-4 mb-xl-0 align-items-center ">
+                            <div class="card mb-6  align-items-center border-0" style="height: 20rem;">
                                 <div class="card-header">Deskripsi</div>
-                                <textarea class="form-control mx-3 my-2 px-2" id="inputUsername" type="text"></textarea>
+                                <textarea class="form-control mx-3 my-2 col-50" style="height: 20rem; wid" id="inputUsername" type="text"></textarea>
+                                
                             </div>
                             <button class="btn btn-primary" type="button" style="float: right">Save changes</button>
                         </div>

@@ -40,7 +40,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">--</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-sun fa-2x text-gray-300"></i>
+                                            <i class="fas fa-lightbulb fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
