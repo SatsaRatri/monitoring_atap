@@ -92,9 +92,13 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Grafik Suhu dan Cahaya</h6>
         </div>
-        <div class="card-body col-md">
-            <div class="chart-area col-md-auto">
-                <canvas id="myAreaChart3"></canvas>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart3"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -258,6 +262,6 @@
             }
         });
 
-     
+
 </script>
 @endpush
