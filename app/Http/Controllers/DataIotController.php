@@ -12,24 +12,36 @@ class DataIotController extends Controller
     public function dashboard(Request $request)
     {
 
-        if($request->ajax()){
+        if ($request->ajax()) {
 
-            return $data = Sensor::orderby('created_at','desc')->take(10)->get()->reverse()->values(); 
-               
+            return $data = Sensor::orderby('created_at', 'desc')->take(10)->get()->reverse()->values();
         }
         // dd($data);
         return view('admin.dashboard');
     }
+
+    public function tableSensor(Request $request)
+    {
+        if ($request->get('tanggal')) {
+            $tanggal = $request->get('tanggal');
+            $data = Sensor::whereDate('created_at', $tanggal)->get();
+        } else {
+            $data = Sensor::all();
+        }
+        return view('admin.tabel', compact('data'));
+    }
+
+
     public function datasensor(Request $request)
     {
-        
-        $animal=new Sensor();
-        $animal->suhu = $request->get('suhu');
-        $animal->cahaya = $request->get('cahaya');
-        $animal->created_at = Carbon::now('Asia/Jakarta');
-        $animal->updated_at = Carbon::now('Asia/Jakarta');
-        $animal->save();
-                return response($animal);
+
+        $sensor = new Sensor();
+        $sensor->suhu = $request->get('suhu');
+        $sensor->cahaya = $request->get('cahaya');
+        $sensor->created_at = Carbon::now('Asia/Jakarta');
+        $sensor->updated_at = Carbon::now('Asia/Jakarta');
+        $sensor->save();
+        return response($sensor);
     }
 
     /**

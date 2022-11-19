@@ -18,13 +18,4 @@ class AdminController extends Controller
     {
         return view('admin.profil');
     }
-
-    public function basispengetahuan()
-    {
-        return view('admin.basispengetahuan');
-    }
-    public function editbasispengetahuan()
-    {
-        return view('admin.editbasispengetahuan');
-    }
 }
