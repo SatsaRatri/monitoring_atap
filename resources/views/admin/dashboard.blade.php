@@ -238,7 +238,17 @@
                 });
 
                 for (var i = 0; i < data.length; i++) {
-                    myLineChart.data.labels.push(data[i].created_at);
+                    //created_at ke tanggal dan waktu
+                    var date = new Date(data[i].created_at);
+                    var tanggal = date.getDate();
+                    var bulan = date.getMonth() + 1;
+                    var tahun = date.getFullYear();
+                    var jam = date.getHours();
+                    var menit = date.getMinutes();
+                    var detik = date.getSeconds();
+                    var waktu = jam + ":" + menit + ":" + detik;
+                    var tanggalwaktu = tanggal + "/" + bulan + "/" + tahun + " " + waktu;
+                    myLineChart.data.labels.push(tanggalwaktu);
                     myLineChart.data.datasets[0].data.push(data[i].suhu);
                     myLineChart.data.datasets[1].data.push(data[i].cahaya);
                 }
