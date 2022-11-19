@@ -136,11 +136,14 @@
         }
 
         $.ajax({
-            url: 'dashboard',
+            url: '{{ route('datasensor.chart') }}',
             type: 'GET',
             dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function(data) {
-                console.log(data[0].suhu);
+                console.log(data);
                 var ctx = document.getElementById("myAreaChart3");
                 var myLineChart = new Chart(ctx, {
                     type: 'line',
@@ -254,6 +257,7 @@
                     myLineChart.data.datasets[0].data.push(data[i].suhu);
                     myLineChart.data.datasets[1].data.push(data[i].cahaya);
                 }
+                myLineChart.update();
             },
             error: function(data) {
                 console.log(data);
