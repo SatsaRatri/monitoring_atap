@@ -28,6 +28,7 @@ Auth::routes();
 Route::get('/', function () {
     return redirect()->route('datasensor.dashboard');
 });
+Route::get('/chart', [DataIotController::class, 'chart'])->name('datasensor.chart');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', [DataIotController::class, 'dashboard'])->name('datasensor.dashboard');
     Route::get('/sensor/table', [DataIotController::class, 'tableSensor'])->name('datasensor.tabel');
