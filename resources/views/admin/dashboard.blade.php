@@ -92,19 +92,20 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Grafik Suhu dan Cahaya</h6>
         </div>
-        <div class="card-body col-md">
-            <div class="chart-area col-md-auto">
-                <canvas id="myAreaChart3"></canvas>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="chart-area ">
+                    <canvas id="myAreaChart3"></canvas>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Content Row -->
-@endsection
-@push('extraJS')
-<script  type="text/javascript">
-    // Set new default font family and font color to mimic Bootstrap's default styling
+    <!-- Content Row -->
+    @endsection
+    @push('extraJS')
+    <script type="text/javascript">
+        // Set new default font family and font color to mimic Bootstrap's default styling
 
 
         function number_format(number, decimals, dec_point, thousands_sep) {
@@ -245,8 +246,7 @@
                     var tahun = date.getFullYear();
                     var jam = date.getHours();
                     var menit = date.getMinutes();
-                    var detik = date.getSeconds();
-                    var waktu = jam + ":" + menit + ":" + detik;
+                    var waktu = jam + ":" + menit ;
                     var tanggalwaktu = tanggal + "/" + bulan + "/" + tahun + " " + waktu;
                     myLineChart.data.labels.push(tanggalwaktu);
                     myLineChart.data.datasets[0].data.push(data[i].suhu);
@@ -259,5 +259,5 @@
         });
 
      
-</script>
-@endpush
+    </script>
+    @endpush
