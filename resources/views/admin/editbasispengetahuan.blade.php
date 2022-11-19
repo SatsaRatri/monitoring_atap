@@ -22,15 +22,12 @@
 
                                 <div class="col-xl-5">
                                     <!-- Profile picture card-->
-                                    <div class="card mb-6  align-items-center" style="height: 20rem;">
+                                    <div class="card mb-6  align-items-center" style="max-width: 540px;">
                                         <div class="card-header">Profile Picture</div>
-                                        <div class="card-body text-center mx-5 my-5">
+                                        <div class="card-body text-center">
                                             <!-- Profile picture image-->
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                                            <img class="img-fluid px-3 px-sm-2 mt-2 mb-4"
                                                 src="{{ asset($basis->path_gambar) }}" alt="...">
-                                            <!-- Profile picture help block-->
-                                            <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB
-                                            </div>
                                             <!-- Profile picture upload button-->
                                             {{-- <button class="btn btn-primary mx-3 my-3" type="button">Upload new
                                                 image</button> --}}
@@ -43,7 +40,7 @@
                                 <!-- Form Group (deskripsi)-->
                                 <div class="col-xl-7 ">
                                     <!-- Profile picture card-->
-                                    <div class="card mb-6  align-items-center border-0" style="height: 20rem;">
+                                    <div class="card mb-6  align-items-center border-0" style="height: 23rem;">
                                         <div class="card-header">Deskripsi</div>
                                         <textarea class="form-control mx-3 my-2 col-50" name="deskripsi" style="height: 20rem; wid" id="inputUsername"
                                             type="text">{{ $basis->deskripsi }}</textarea>

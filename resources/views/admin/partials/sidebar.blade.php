@@ -42,7 +42,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('datasensor.grafik') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Grafik</span></a>
             </li>

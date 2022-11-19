@@ -20,6 +20,18 @@ class DataIotController extends Controller
         return view('admin.dashboard');
     }
 
+    public function datasensor(Request $request)
+    {
+
+        $sensor = new Sensor();
+        $sensor->suhu = $request->get('suhu');
+        $sensor->cahaya = $request->get('cahaya');
+        $sensor->created_at = Carbon::now('Asia/Jakarta');
+        $sensor->updated_at = Carbon::now('Asia/Jakarta');
+        $sensor->save();
+        return response($sensor);
+    }
+
     public function tableSensor(Request $request)
     {
         if ($request->get('tanggal')) {
@@ -31,17 +43,15 @@ class DataIotController extends Controller
         return view('admin.tabel', compact('data'));
     }
 
-
-    public function datasensor(Request $request)
+    public function grafikSensor(Request $request)
     {
-
-        $sensor = new Sensor();
-        $sensor->suhu = $request->get('suhu');
-        $sensor->cahaya = $request->get('cahaya');
-        $sensor->created_at = Carbon::now('Asia/Jakarta');
-        $sensor->updated_at = Carbon::now('Asia/Jakarta');
-        $sensor->save();
-        return response($sensor);
+        if ($request->get('tanggal')) {
+            $tanggal = $request->get('tanggal');
+            $data = Sensor::whereDate('created_at', $tanggal)->get();
+        } else {
+            $data = Sensor::all();
+        }
+        return view('admin.grafik', compact('data'));
     }
 
     /**
