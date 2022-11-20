@@ -11,11 +11,11 @@ class DataIotController extends Controller
 {
     public function dashboard(Request $request)
     {
-
-
-        return view('admin.dashboard');
+        $sensor = Sensor::orderby('created_at', 'desc')->first();
+        return view('admin.dashboard', compact('sensor'));
     }
-    public function chart()
+
+    public function ajaxSensor()
     {
         $data = Sensor::orderby('created_at', 'desc')->take(10)->get()->reverse()->values();
         return response()->json($data);

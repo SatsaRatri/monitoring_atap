@@ -28,13 +28,14 @@ Auth::routes();
 Route::get('/', function () {
     return redirect()->route('datasensor.dashboard');
 });
-Route::get('/chart', [DataIotController::class, 'chart'])->name('datasensor.chart');
+Route::get('/chart', [DataIotController::class, 'ajaxSensor'])->name('datasensor.chart');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', [DataIotController::class, 'dashboard'])->name('datasensor.dashboard');
     Route::get('/sensor/table', [DataIotController::class, 'tableSensor'])->name('datasensor.tabel');
-    Route::get('/sensor/grafik',[DataIotController::class,'grafikSensor'])->name('datasensor.grafik');
+    Route::get('/sensor/grafik', [DataIotController::class, 'grafikSensor'])->name('datasensor.grafik');
 
     Route::resource('basispengetahuan', BasisPengehtahuanController::class);
 
     Route::get('/profil', [AdminController::class, 'profil'])->name('profil');
+    Route::put('/profil', [AdminController::class, 'updateProfil'])->name('profil.update');
 });
