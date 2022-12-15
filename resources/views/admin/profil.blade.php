@@ -5,7 +5,7 @@
         <div class="container-xl px-4 mt-4">
             <!-- Account page navigation-->
             <nav class="nav nav-borders">
-                <a class="nav-link active ms-0" href="{{ route('profil') }}">Profile</a>
+                <a class="nav-link active mes-0" href="{{ route('profil') }}">Profile</a>
 
             </nav>
             <hr class="mt-0 mb-4">
@@ -25,13 +25,13 @@
                                 <!-- Profile picture help block-->
                                 <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                                 <!-- Profile picture upload button-->
-                                <input type="file" class="btn btn-primary" name="avatar" id="avatar">
+                                <input type="file" class="btn btn-primary" style="width: 15rem;" name="avatar" id="avatar">
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-8">
+                    <div class="col-xl-8" >
                         <!-- Account details card-->
-                        <div class="card mb-4">
+                        <div class="card mb-4 "style="height: 27rem;">
                             <div class="card-header">Account Details</div>
                             <div class="card-body">
                                 <form>
@@ -54,7 +54,7 @@
                                     <!-- Form Row    -->
 
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit">Save changes</button>
+                                    <button class="btn btn-primary mt-5" style="float: right" type="submit">Save changes</button>
                                 </form>
                             </div>
                         </div>

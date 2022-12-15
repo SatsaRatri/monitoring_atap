@@ -17,7 +17,7 @@ class CreateBasisPengetahuansTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('path_gambar');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

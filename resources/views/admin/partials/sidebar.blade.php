@@ -7,7 +7,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="d-flex align-items-center justify-content-center" >
                 <div class="sidebar-brand-icon rotate-n-0">
                     <i class="fas fa-campground"></i>
                 </div>
@@ -32,13 +32,6 @@
                 --
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link " href="{{ route('basispengetahuan.index') }}">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Basis Pengetahuan</span>
-                </a>
-            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -63,6 +56,18 @@
             </div>
 
             <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('basispengetahuan.index') }}">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Perhitungan MTTR</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('basispengetahuan.index') }}">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Basis Pengetahuan</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('profil') }}">
                     <i class="fas fa-fw fa-user"></i>

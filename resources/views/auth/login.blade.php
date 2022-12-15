@@ -1,20 +1,20 @@
 @include('admin.partials.head')
 
-<body class="bg-gradient-primary">
+<body class="">
 
     <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-12 col-lg-12 col-md-12">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
+                    <div class="card-body p-12">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block ">
-                                <img class="col-md img-center" src="{{ asset('template/img/mdr-logo.svg') }}">
+                            <div class="col-lg-4 d-none d-lg-block ">
+                                <img class="col-md img-center mt-3" src="{{ asset('template/img/mdr-logo.svg') }}">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
