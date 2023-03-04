@@ -27,7 +27,7 @@
                                     Analisis Mean Time To Repair (MTTR)</div>
                                     <div class="mb-3">
                                         <input class="form-control" id="inputnilai" name="nilai" type="text"
-                                            placeholder="HAsil MTTR" >
+                                            placeholder="Hasil MTTR" >
                                     </div> 
                             </div>
                         </div>
