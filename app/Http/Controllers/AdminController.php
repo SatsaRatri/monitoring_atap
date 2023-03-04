@@ -15,6 +15,10 @@ class AdminController extends Controller
     {
         return view('admin.signup');
     }
+    public function analisis()
+    {
+        return view('admin.analisis');
+    }
     public function profil()
     {
         $user = auth()->user();

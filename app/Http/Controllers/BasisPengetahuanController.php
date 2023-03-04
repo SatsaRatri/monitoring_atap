@@ -6,7 +6,7 @@ use App\Models\BasisPengetahuan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
-class BasisPengehtahuanController extends Controller
+class BasisPengetahuanController extends Controller
 {
     /**
      * Display a listing of the resource.
