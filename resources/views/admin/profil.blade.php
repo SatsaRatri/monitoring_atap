@@ -49,7 +49,7 @@
                                     <div class="mb-3">
                                         <label class="small mb-1" for="inputPassword">Password</label>
                                         <input class="form-control" id="inputPassword" name="password" type="password"
-                                            placeholder="Enter your username" value="">
+                                            placeholder="Enter your password" value="">
                                     </div>
                                     <!-- Form Row    -->
 

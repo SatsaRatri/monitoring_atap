@@ -25,20 +25,10 @@
                             <div class="col mr-3">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style ="text-align:center">
                                     Analisis Mean Time To Repair (MTTR)</div>
-                                    <div class="row">
                                     <div class="mb-3">
-                                        <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                            placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                    </div> :
-                                    <div class="mb-3">
-                                        <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                            placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                    </div> = 
-                                    <div class="mb-3">
-                                        <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                            placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                    </div>
-                                    </div>
+                                        <input class="form-control" id="inputnilai" name="nilai" type="text"
+                                            placeholder="HAsil MTTR" >
+                                    </div> 
                             </div>
                         </div>
                     </div>
@@ -54,20 +44,10 @@
                                 <div class="col mr-3">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style ="text-align:center">
                                         Mean Time Between Failure (MTBF)</div>
-                                        <div class="row">
                                         <div class="mb-3">
                                             <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                        </div> :
-                                        <div class="mb-3">
-                                            <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                        </div> = 
-                                        <div class="mb-3">
-                                            <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                        </div>
-                                        </div>
+                                                placeholder="Hasil MTBF" >
+                                        </div> 
                                 </div>
                             </div>
                         </div>
@@ -83,19 +63,9 @@
                                     <div class="col mr-3">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style ="text-align:center">
                                             Mean Time To Acknowledge (MTTA)</div>
-                                            <div class="row">
                                             <div class="mb-3">
                                                 <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                    placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                            </div> :
-                                            <div class="mb-3">
-                                                <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                    placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                            </div> = 
-                                            <div class="mb-3">
-                                                <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                                    placeholder="Total waktu yang dihabiskan untuk perbaikan selama periode tertentu" >
-                                            </div>
+                                                    placeholder="Hasil MTTA" >
                                             </div>
                                     </div>
                                 </div>
