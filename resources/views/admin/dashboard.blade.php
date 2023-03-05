@@ -67,8 +67,18 @@
                 </div>
             </div>
         </div>
-        <div class="card shadow col-md-auto">
-            <div class="card-header py-3">
+        <div class="card shadow mb-5">
+            <div class="card-header">
+                <h5 class="font-weight-bold text-primary mt-2">Grafik Suhu dan Cahaya</h5>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart3"></canvas>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="card shadow col-md-auto">
+            <div class="card-header">
                 <h6 class="m-0 font-weight-bold text-primary">Grafik Suhu dan Cahaya</h6>
             </div>
             <div class="card-body">
@@ -80,7 +90,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Content Row -->
     @endsection

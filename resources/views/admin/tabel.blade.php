@@ -9,14 +9,34 @@
             <div class="card-header py-12">
                 <div class="d-flex flex-row align-items-center ">
                     <h6 class="m-0 font-weight-bold text-primary">Data Tabel</h6>
-                    <button class="fas fa-calendar-alt fa-2x text-gray-700 border-0 ml-auto"></button>
+                    {{-- <button class="fas fa-calendar-alt fa text-gray-700 border-0 ml-auto"></button>
                     <form action="{{ route('datasensor.tabel') }}" method="get">
                         <input type="date" name="tanggal" id="tanggal"
                             value="{{ request()->get('tanggal') ? request()->get('tanggal') : '' }}">
                         <button type="submit" class="btn btn-primary">Cari</button>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
+            <div class="d-flex">
+                <div class="card-body">
+                    <div class="me-auto">
+                        <div class="md-form md-outline input-with-post-icon datepicker">
+                            <label for="example">Tanggal</label>
+                            <form action="{{ route('datasensor.tabel') }}" method="get">
+                                <div class="d-flex flex-row">
+                                    <div class="w-50">
+                                        <input placeholder="Select date" type="date" name="tanggal" id="tanggal" class="form-control" value="{{ request()->get('tanggal') ? request()->get('tanggal') : '' }}">
+                                    </div>
+                                    <div class="">
+                                        <button type="submit" class="btn btn-primary mx-2">Cari</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -28,7 +48,6 @@
                                 <th>Status</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @foreach ($data as $item)
                                 <tr>

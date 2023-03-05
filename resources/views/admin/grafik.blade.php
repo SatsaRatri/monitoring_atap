@@ -1,9 +1,36 @@
 @extends('admin.partials.master')
 @section('content')
     <div class="container-fluid">
-        <div class="row ">
+        <div class="row">
             <!-- Area Chart -->
-            <div class="card shadow col-md-12 my-2 ">
+            <div class="p-3 w-100">
+                <div class="">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold text-primary mt-2">Chart Suhu</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myAreaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="font-weight-bold text-primary mt-2">Chart Cahaya</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myAreaChart1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- <div class="card shadow col-md-12 my-2 ">
                 <div class="card-header py-4">
                     <h6 class="m-0 font-weight-bold text-primary">Chart Suhu</h6>
                 </div>
@@ -22,7 +49,7 @@
                         <canvas id="myAreaChart1"></canvas>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             {{-- <div class="card shadow col-md ">
       <div class="card-header py-4">
         <h6 class="m-0 font-weight-bold text-primary"> Chart Kalman Filter</h6>

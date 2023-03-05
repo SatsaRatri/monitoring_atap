@@ -7,12 +7,16 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="d-flex align-items-center justify-content-center" >
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('datasensor.dashboard') }}">
+                <div class="sidebar-brand-text mx-3">Monitoring Atap</div>
+            </a>
+            <!-- Sidebar - Brand -->
+            {{-- <a class="d-flex align-items-center justify-content-center" >
                 <div class="sidebar-brand-icon rotate-n-0">
                     <i class="fas fa-campground"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Monitoring Atap</div>
-            </a>
+            </a> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -28,9 +32,9 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            {{-- <div class="sidebar-heading">
                 --
-            </div>
+            </div> --}}
 
 
             <!-- Nav Item - Charts -->
@@ -51,15 +55,15 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            {{-- <div class="sidebar-heading">
                 --
-            </div>
+            </div> --}}
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('analisis') }}">
                     <i class="fas fa-fw fa-calculator"></i>
-                    <span>Analisis Preventive MAintenance</span>
+                    <span>Analisis Preventive Maintenance</span>
                 </a>
             </li>
             <li class="nav-item">

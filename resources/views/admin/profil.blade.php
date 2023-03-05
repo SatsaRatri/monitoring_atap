@@ -23,9 +23,10 @@
                                     src="{{ asset($user->profile_photo_path ? $user->profile_photo_path : 'template/img/undraw_profile.svg') }}"
                                     alt="" style="height: 250px; width: 250px">
                                 <!-- Profile picture help block-->
-                                <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                                <p class="mt-2"><span style="color:red">*</span><small> JPG or PNG no larger than 5 MB</small></p>
+                                {{-- <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div> --}}
                                 <!-- Profile picture upload button-->
-                                <input type="file" class="btn btn-primary" style="width: 15rem;" name="avatar" id="avatar">
+                                <input type="file" class="" style="width: 15rem;" name="avatar" id="avatar">
                             </div>
                         </div>
                     </div>
@@ -44,7 +45,7 @@
                                     <div class="mb-3">
                                         <label class="small mb-1" for="inputEmail">Email</label>
                                         <input class="form-control" id="inputEmail" name="email" type="email"
-                                            placeholder="Enter your username" value="{{ $user->email }}" disabled>
+                                            placeholder="Enter your username" value="{{ $user->email }}" disabled style="background-color: white">
                                     </div>
                                     <div class="mb-3">
                                         <label class="small mb-1" for="inputPassword">Password</label>
