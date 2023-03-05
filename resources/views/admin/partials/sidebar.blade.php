@@ -57,9 +57,9 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('basispengetahuan.index') }}">
+                <a class="nav-link " href="{{ route('analisis') }}">
                     <i class="fas fa-fw fa-calculator"></i>
-                    <span>Perhitungan MTTR</span>
+                    <span>Analisis Preventive MAintenance</span>
                 </a>
             </li>
             <li class="nav-item">

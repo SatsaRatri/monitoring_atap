@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataIotController;
-use App\Http\Controllers\BasisPengehtahuanController;
+use App\Http\Controllers\BasisPengetahuanController;
+use App\Http\Controllers\AnalisisController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -34,8 +35,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/sensor/table', [DataIotController::class, 'tableSensor'])->name('datasensor.tabel');
     Route::get('/sensor/grafik', [DataIotController::class, 'grafikSensor'])->name('datasensor.grafik');
 
-    Route::resource('basispengetahuan', BasisPengehtahuanController::class);
-
+    Route::resource('basispengetahuan', BasisPengetahuanController::class);
+    //Route::get('/analisis', [AnalisisController::class, 'analisis'])->name('analisis');
     Route::get('/profil', [AdminController::class, 'profil'])->name('profil');
     Route::put('/profil', [AdminController::class, 'updateProfil'])->name('profil.update');
+    Route::get('/analisis', [AdminController::class, 'analisis'])->name('analisis');
 });
