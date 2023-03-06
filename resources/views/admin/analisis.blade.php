@@ -19,8 +19,24 @@
         </header>
         <div class="row"> 
             <div class="card-body col-md mt-3">
-                <div class="row justify-content-evenly">
-                    <div class="col-4">
+                <div class="row justify-content-center">
+                    <div class="col-5">
+                        <div class="md-form md-outline input-with-post-icon datepicker">
+                            <label for="">Tanggal Mulai</label>
+                            <input placeholder="Select date" type="date" id="example" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="md-form md-outline input-with-post-icon datepicker">
+                            <label for="">Tanggal Akhir</label>
+                            <input placeholder="Select date" type="date" id="example" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <label for="" class="mt-3"></label><br>
+                        <button type="submit" class="btn btn-primary">Cari</button>
+                    </div>
+                    {{-- <div class="col-4">
                         <div class="md-form md-outline input-with-post-icon datepicker">
                             <label for="">Tanggal Mulai</label>
                             <input placeholder="Select date" type="date" id="example" class="form-control">
@@ -32,6 +48,9 @@
                             <input placeholder="Select date" type="date" id="example" class="form-control">
                         </div>
                     </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary">Cari</button>
+                    </div> --}}
                 </div>
             </div>
             <div class="card-body col-md">
