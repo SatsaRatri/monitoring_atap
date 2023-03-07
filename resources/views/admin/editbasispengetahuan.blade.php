@@ -8,7 +8,7 @@
                 <div class="row my-5">
                     {!! csrf_field() !!}
                     {!! method_field('PUT') !!}
-                    <div class="card">
+                    <div class="card w-100">
                         <div class="card-header font-weight-bold text-primary">
                             Edit Data
                         </div>
