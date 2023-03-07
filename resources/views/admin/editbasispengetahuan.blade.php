@@ -2,10 +2,10 @@
 @section('content')
     <main>
         <!-- Main page content-->
-        <form action="{{ route('basispengetahuan.update', $basis->id) }}" method="post" enctype="multipart/form-data">
-            <div class="container-xl px-4 mt-4">
+        <div class="container-xl p-auto">
+            <form action="{{ route('basispengetahuan.update', $basis->id) }}" method="post" enctype="multipart/form-data">
                 <!-- Knowledge base home header option-->
-                <div class="row my-5">
+                <div class="row mb-3">
                     {!! csrf_field() !!}
                     {!! method_field('PUT') !!}
                     <div class="card w-100">
@@ -30,8 +30,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
 
     </main>
 @endsection
