@@ -23,8 +23,8 @@
                             </div>
                             <div>
                                 <label for="">Pilih Foto</label><br>
-                                <img class="img-fluid w-50" src="{{ asset($basis->path_gambar) }}" alt="...">
-                                <input type="file" class="mx-4" name="gambar" id="gambar">
+                                <img class="img-fluid w-50" src="{{ asset($basis->path_gambar) }}" alt="..."><br>
+                                <input type="file" class="mt-3" name="gambar" id="gambar">
                             </div>
                             <button class="btn btn-primary mt-5" type="submit" style="float: right">Save Changes</button>
                         </div>

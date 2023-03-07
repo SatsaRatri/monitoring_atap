@@ -23,9 +23,10 @@
                             </div>
                             <div>
                                 <label for="">Pilih Foto</label><br>
-                                <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="">
-                                <input type="file" class="" name="gambar" id="gambar">
-                                <p class="mt-2"><span style="color:red">*</span><small> JPG or PNG no larger than 5 MB</small></p>
+                                <img class="img-account-profile rounded-circle mb-2 mt-3" src="{{ asset('template/img/undraw_profile.svg') }}" alt="" style="height: 250px; width: 250px">
+                                {{-- <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt=""> --}}
+                                <p class="mt-2 mx-4"><span style="color:red">*</span><small> JPG or PNG no larger than 5 MB</small></p>
+                                <input type="file" class="mx-4" name="gambar" id="gambar">
                             </div>
                             <button class="btn btn-primary mt-5" type="submit" style="float: right">Save Changes</button>
                         </div>
