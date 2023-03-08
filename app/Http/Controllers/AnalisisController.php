@@ -33,6 +33,7 @@ class AnalisisController extends Controller
 
             $menit = 360;
             $awalTgl = \Carbon\Carbon::parse($awalTgl);
+            $akhirTgl = \Carbon\Carbon::parse($akhirTgl);
             $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
             $totalJam = $totalHari * $menit;
             $mttr = $menitGagal / $hariGagal;
