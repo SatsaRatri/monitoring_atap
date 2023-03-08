@@ -23,8 +23,8 @@
                             </div>
                             <div>
                                 <label for="">Pilih Foto</label><br>
-                                <img class="img-fluid w-50" src="{{ asset($basis->path_gambar) }}" alt="..."><br>
-                                <input type="file" class="mt-3" name="gambar" id="gambar">
+                                <img class="img-fluid w-50" src="{{ asset($basis->path_gambar) }}" alt="..." id="blah"><br>
+                                <input type="file" class="mt-3" name="gambar" id="gambar" onchange="readURL(this);">
                             </div>
                             <button class="btn btn-primary mt-5" type="submit" style="float: right">Save Changes</button>
                         </div>
@@ -35,3 +35,19 @@
 
     </main>
 @endsection
+@push('extraJS')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+@endpush
