@@ -28,7 +28,10 @@
                                         <input placeholder="Select date" type="date" name="tanggal" id="tanggal" class="form-control" value="{{ request()->get('tanggal') ? request()->get('tanggal') : '' }}">
                                     </div>
                                     <div class="">
-                                        <button type="submit" class="btn btn-primary mx-2">Cari</button>
+                                        <button type="submit" class="btn btn-primary mx-2 border-0">Cari</button>
+                                    </div>
+                                    <div class="">
+                                        <button type="submit" class="btn btn-primary border-0" style="background-color: #54B435;">Export</button>
                                     </div>
                                 </div>
                             </form>
