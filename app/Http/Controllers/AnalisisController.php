@@ -12,12 +12,14 @@ class AnalisisController extends Controller
         $mttr = 0;
         $mtbf = 0;
         if (isset($request->tgl_awal) && isset($request->tgl_akhir)) {
-            $awalTgl = $request->tgl_awal . '00:00:00';
-            $akhirTgl = $request->tgl_akhir . '23:59:59';
+            $awalTgl = $request->tgl_awal . ' 00:00:00';
+            $akhirTgl = $request->tgl_akhir . ' 23:59:59';
+            // dd($awalTgl, $akhirTgl);
             $sensor = Sensor::where(function ($query) {
                 $query->where('cahaya', '<=', 0)
                     ->orWhere('suhu', '<=', 0);
             })->where('created_at', '>=', $awalTgl)->where('created_at', '<=', $akhirTgl)->get();
+            // dd($sensor->count());
             if ($sensor->count() > 0) {
                 $hariGagal = 0;
                 $menitGagal = 0;
@@ -51,7 +53,7 @@ class AnalisisController extends Controller
             $query->where('cahaya', '<=', 0)
                 ->orWhere('suhu', '<=', 0);
         })->where('created_at', '>=', $awalTgl)->where('created_at', '<=', $akhirTgl)->get();
-        dd($sensor->count());
+        // dd($sensor->count());
         $hariGagal = 0;
         $menitGagal = 0;
         $tanggal = [];
