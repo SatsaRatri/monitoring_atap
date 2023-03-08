@@ -8,7 +8,7 @@
         <div class="card shadow mb-8">
             <div class="card-header py-12">
                 <div class="d-flex flex-row align-items-center ">
-                    <h6 class="m-0 font-weight-bold text-primary">Data Tabel</h6>
+                    <h5 class="font-weight-bold text-primary mt-2">Data Tabel</h5>
                     {{-- <button class="fas fa-calendar-alt fa text-gray-700 border-0 ml-auto"></button>
                     <form action="{{ route('datasensor.tabel') }}" method="get">
                         <input type="date" name="tanggal" id="tanggal"

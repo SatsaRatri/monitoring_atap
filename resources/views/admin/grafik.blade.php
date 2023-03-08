@@ -7,7 +7,7 @@
                 <div class="">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="font-weight-bold text-primary mt-2">Chart Suhu</h5>
+                            <h5 class="font-weight-bold text-primary mt-2">Grafik Suhu</h5>
                         </div>
                         <div class="card-body">
                             <div class="chart-area">
@@ -19,7 +19,7 @@
                 <div class="mt-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="font-weight-bold text-warning mt-2">Chart Cahaya</h5>
+                            <h5 class="font-weight-bold text-warning mt-2">Grafik Cahaya</h5>
                         </div>
                         <div class="card-body">
                             <div class="chart-area">

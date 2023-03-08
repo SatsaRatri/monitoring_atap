@@ -5,7 +5,7 @@
         <div class="container-xl px-4 mt-4">
             <!-- Account page navigation-->
             <nav class="nav nav-borders">
-                <a class="nav-link active mes-0" href="{{ route('profil') }}">Profile</a>
+                <a class="nav-link active mes-0" href="{{ route('profil') }}">Profil</a>
 
             </nav>
             <hr class="mt-0 mb-4">
@@ -16,7 +16,7 @@
                     <div class="col-xl-4">
                         <!-- Profile picture card-->
                         <div class="card mb-4 mb-xl-0">
-                            <div class="card-header">Profile Picture</div>
+                            <div class="card-header">Gambar Profil</div>
                             <div class="card-body text-center">
                                 <!-- Profile picture image-->
                                 <img class="img-account-profile rounded-circle mb-2"
@@ -33,12 +33,12 @@
                     <div class="col-xl-8" >
                         <!-- Account details card-->
                         <div class="card mb-4 "style="height: 27rem;">
-                            <div class="card-header">Account Details</div>
+                            <div class="card-header">Detail Akun</div>
                             <div class="card-body">
                                 <form>
                                     <!-- Form Group (username)-->
                                     <div class="mb-3">
-                                        <label class="small mb-1" for="inputName">Name</label>
+                                        <label class="small mb-1" for="inputName">Nama</label>
                                         <input class="form-control" id="inputName" name="name" type="text"
                                             placeholder="Enter your username" value="{{ $user->name }}">
                                     </div>
@@ -55,7 +55,7 @@
                                     <!-- Form Row    -->
 
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary mt-5" style="float: right" type="submit">Save changes</button>
+                                    <button class="btn btn-primary mt-5" style="float: right" type="submit">Simpan Perubahan</button>
                                 </form>
                             </div>
                         </div>

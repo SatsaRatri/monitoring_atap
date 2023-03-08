@@ -25,7 +25,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('datasensor.dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
@@ -48,7 +48,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('datasensor.tabel') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Table</span></a>
+                    <span>Tabel</span></a>
             </li>
 
             <!-- Divider -->
