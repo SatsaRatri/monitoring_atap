@@ -15,7 +15,7 @@ class AdminController extends Controller
     {
         return view('admin.signup');
     }
-    public function analisis()
+    public function analisis(Request $request)
     {
         return view('admin.analisis');
     }

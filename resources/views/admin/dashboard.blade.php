@@ -57,7 +57,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                     Status</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">--</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $sensor->status }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-power-off fa-2x text-gray-300"></i>
@@ -152,6 +152,8 @@
                                     pointHitRadius: 10,
                                     pointBorderWidth: 2,
                                     data: [],
+                                    //axes kanan
+                                    yAxisID: 'y-axis-2',
                                 },
                                 {
                                     label: "Cahaya",
@@ -167,6 +169,8 @@
                                     pointHitRadius: 10,
                                     pointBorderWidth: 2,
                                     data: [],
+                                    //axes kiri
+                                    yAxisID: 'y-axis-1',
                                 }
                             ],
                         },
@@ -194,18 +198,36 @@
                                     }
                                 }],
                                 yAxes: [{
-                                    ticks: {
-                                        maxTicksLimit: 5,
-                                        padding: 10,
+                                        position: "right",
+                                        id: "y-axis-1",
+                                        ticks: {
+                                            maxTicksLimit: 5,
+                                            padding: 10,
+                                        },
+                                        gridLines: {
+                                            color: "rgb(234, 236, 244)",
+                                            zeroLineColor: "rgb(234, 236, 244)",
+                                            drawBorder: false,
+                                            borderDash: [2],
+                                            zeroLineBorderDash: [2]
+                                        }
                                     },
-                                    gridLines: {
-                                        color: "rgb(234, 236, 244)",
-                                        zeroLineColor: "rgb(234, 236, 244)",
-                                        drawBorder: false,
-                                        borderDash: [2],
-                                        zeroLineBorderDash: [2]
+                                    {
+                                        position: "left",
+                                        id: "y-axis-2",
+                                        ticks: {
+                                            maxTicksLimit: 5,
+                                            padding: 10,
+                                        },
+                                        gridLines: {
+                                            color: "rgb(234, 236, 244)",
+                                            zeroLineColor: "rgb(234, 236, 244)",
+                                            drawBorder: false,
+                                            borderDash: [2],
+                                            zeroLineBorderDash: [2]
+                                        }
                                     }
-                                }],
+                                ],
                             },
                             legend: {
                                 display: true

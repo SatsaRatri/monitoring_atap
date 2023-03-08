@@ -39,5 +39,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     //Route::get('/analisis', [AnalisisController::class, 'analisis'])->name('analisis');
     Route::get('/profil', [AdminController::class, 'profil'])->name('profil');
     Route::put('/profil', [AdminController::class, 'updateProfil'])->name('profil.update');
-    Route::get('/analisis', [AdminController::class, 'analisis'])->name('analisis');
+    Route::get('/analisis', [AnalisisController::class, 'analisis'])->name('analisis');
+    Route::get('/analisis/test', [AnalisisController::class, 'testing'])->name('test');
 });
