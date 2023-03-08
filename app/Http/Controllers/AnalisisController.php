@@ -18,26 +18,27 @@ class AnalisisController extends Controller
                 $query->where('cahaya', '<=', 0)
                     ->orWhere('suhu', '<=', 0);
             })->where('created_at', '>=', $awalTgl)->where('created_at', '<=', $akhirTgl)->get();
-            $hariGagal = 0;
-            $menitGagal = 0;
-            $tanggal = [];
-            foreach ($sensor as $s) {
-                if (in_array($s->created_at->format('Y-m-d'), $tanggal)) {
-                    $menitGagal += 1;
-                } else {
-                    $menitGagal += 1;
-                    $hariGagal += 1;
-                    array_push($tanggal, $s->created_at->format('Y-m-d'));
+            if ($sensor->count() > 0) {
+                $hariGagal = 0;
+                $menitGagal = 0;
+                $tanggal = [];
+                foreach ($sensor as $s) {
+                    if (in_array($s->created_at->format('Y-m-d'), $tanggal)) {
+                        $menitGagal += 1;
+                    } else {
+                        $menitGagal += 1;
+                        $hariGagal += 1;
+                        array_push($tanggal, $s->created_at->format('Y-m-d'));
+                    }
                 }
+                $menit = 360;
+                $awalTgl = \Carbon\Carbon::parse($awalTgl);
+                $akhirTgl = \Carbon\Carbon::parse($akhirTgl);
+                $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
+                $totalJam = $totalHari * $menit;
+                $mttr = $menitGagal / $hariGagal;
+                $mtbf = $totalJam / $menitGagal;
             }
-
-            $menit = 360;
-            $awalTgl = \Carbon\Carbon::parse($awalTgl);
-            $akhirTgl = \Carbon\Carbon::parse($akhirTgl);
-            $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
-            $totalJam = $totalHari * $menit;
-            $mttr = $menitGagal / $hariGagal;
-            $mtbf = $totalJam / $menitGagal;
         }
         return view('admin.analisis', compact('mttr', 'mtbf'));
     }
