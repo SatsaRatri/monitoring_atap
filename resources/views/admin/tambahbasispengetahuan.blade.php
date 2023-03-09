@@ -23,10 +23,10 @@
                             </div>
                             <div>
                                 <label for="">Pilih Foto</label><br>
-                                <img class="img-account-profile rounded-circle mb-2 mt-3" src="{{ asset('template/img/undraw_profile.svg') }}" alt="" style="height: 250px; width: 250px">
+                                <img class="img-account-profile rounded-circle mb-2 mt-3" src="{{ asset('template/img/undraw_profile.svg') }}" alt="" style="height: 250px; width: 250px" id="blah">
                                 {{-- <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt=""> --}}
                                 <p class="mt-2 mx-4"><span style="color:red">*</span><small> JPG or PNG no larger than 5 MB</small></p>
-                                <input type="file" class="mx-4" name="gambar" id="gambar">
+                                <input type="file" class="mx-4" name="gambar" id="gambar" onchange="readURL(this);">
                             </div>
                             <button class="btn btn-primary mt-5" type="submit" style="float: right">Save Changes</button>
                         </div>
@@ -38,3 +38,19 @@
 
     </main>
 @endsection
+@push('extraJS')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+@endpush

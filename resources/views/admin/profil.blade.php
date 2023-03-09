@@ -21,12 +21,12 @@
                                 <!-- Profile picture image-->
                                 <img class="img-account-profile rounded-circle mb-2"
                                     src="{{ asset($user->profile_photo_path ? $user->profile_photo_path : 'template/img/undraw_profile.svg') }}"
-                                    alt="" style="height: 250px; width: 250px">
+                                    alt="" style="height: 250px; width: 250px" id="blah">
                                 <!-- Profile picture help block-->
                                 <p class="mt-2"><span style="color:red">*</span><small> JPG or PNG no larger than 5 MB</small></p>
                                 {{-- <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div> --}}
                                 <!-- Profile picture upload button-->
-                                <input type="file" class="" style="width: 15rem;" name="avatar" id="avatar">
+                                <input type="file" class="" style="width: 15rem;" name="avatar" id="avatar" onchange="readURL(this);">
                             </div>
                         </div>
                     </div>
@@ -65,3 +65,19 @@
         </div>
     </main>
 @endsection
+@push('extraJS')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+@endpush
