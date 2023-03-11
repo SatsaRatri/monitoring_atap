@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Sensor;
 use Carbon\Carbon;
+use App\Models\Sensor;
+use Illuminate\Http\Request;
+use App\Exports\SensorExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class DataIotController extends Controller
@@ -98,5 +100,11 @@ class DataIotController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    //exportSensor
+    public function exportSensor(Request $request)
+    {
+        return Excel::download(new SensorExport, 'sensor.xlsx');
     }
 }

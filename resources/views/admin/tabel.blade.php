@@ -25,13 +25,16 @@
                             <form action="{{ route('datasensor.tabel') }}" method="get">
                                 <div class="d-flex flex-row">
                                     <div class="w-50">
-                                        <input placeholder="Select date" type="date" name="tanggal" id="tanggal" class="form-control" value="{{ request()->get('tanggal') ? request()->get('tanggal') : '' }}">
+                                        <input placeholder="Select date" type="date" name="tanggal" id="tanggal"
+                                            class="form-control"
+                                            value="{{ request()->get('tanggal') ? request()->get('tanggal') : '' }}">
                                     </div>
                                     <div class="">
                                         <button type="submit" class="btn btn-primary mx-2 border-0">Cari</button>
                                     </div>
                                     <div class="">
-                                        <button type="submit" class="btn btn-primary border-0" style="background-color: #54B435;">Export</button>
+                                        <a href="{{ route('datasensor.export') }}" target="_blank"
+                                            class="btn btn-primary border-0" style="background-color: #54B435;">Export</a>
                                     </div>
                                 </div>
                             </form>

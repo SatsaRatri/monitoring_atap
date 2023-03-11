@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
 
@@ -34,8 +35,8 @@ class AnalisisController extends Controller
                     }
                 }
                 $menit = 360;
-                $awalTgl = \Carbon\Carbon::parse($awalTgl);
-                $akhirTgl = \Carbon\Carbon::parse($akhirTgl);
+                $awalTgl = Carbon::parse($awalTgl);
+                $akhirTgl = Carbon::parse($akhirTgl);
                 $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
                 $totalJam = $totalHari * $menit;
                 $mttr = $menitGagal / $hariGagal;
