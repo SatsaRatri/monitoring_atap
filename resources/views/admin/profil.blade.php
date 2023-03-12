@@ -5,7 +5,7 @@
         <div class="container-xl px-4 mt-4">
             <!-- Account page navigation-->
             <nav class="nav nav-borders">
-                <a class="nav-link active mes-0" href="{{ route('profil') }}">Profil</a>
+                <h1 class=" h3 mb-0 text-gray-800 nav-link active mes-0" href="{{ route('profil') }}">Profil</h1>
 
             </nav>
             <hr class="mt-0 mb-4">
