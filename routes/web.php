@@ -33,6 +33,7 @@ Route::get('/chart', [DataIotController::class, 'ajaxSensor'])->name('datasensor
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', [DataIotController::class, 'dashboard'])->name('datasensor.dashboard');
     Route::get('/sensor/table', [DataIotController::class, 'tableSensor'])->name('datasensor.tabel');
+    Route::get('/sensor/export', [DataIotController::class, 'exportSensor'])->name('datasensor.export');
     Route::get('/sensor/grafik', [DataIotController::class, 'grafikSensor'])->name('datasensor.grafik');
 
     Route::resource('basispengetahuan', BasisPengetahuanController::class);
