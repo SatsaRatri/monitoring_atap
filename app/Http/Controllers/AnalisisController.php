@@ -38,9 +38,11 @@ class AnalisisController extends Controller
                 $awalTgl = Carbon::parse($awalTgl);
                 $akhirTgl = Carbon::parse($akhirTgl);
                 $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
-                $totalJam = $totalHari * $menit;
+                $totalWaktu = $totalHari * $menit;
+
+                $opGagal = $totalWaktu - $menitGagal;
                 $mttr = $menitGagal / $hariGagal;
-                $mtbf = $totalJam / $menitGagal;
+                $mtbf = $opGagal / $hariGagal;
             }
         }
         return view('admin.analisis', compact('mttr', 'mtbf'));
@@ -48,12 +50,12 @@ class AnalisisController extends Controller
     //testing
     public function testing()
     {        //mttr 30 hari suhu dan cahaya code
-        $awalTgl = '2022-11-07' . '00:00:00';
-        $akhirTgl = '2022-11-07 ' . '23:59:59';
+        $awalTgl = '2022-11-01' . '00:00:00';
+        $akhirTgl = '2022-11-30 ' . '23:59:59';
         $sensor = Sensor::where(function ($query) {
             $query->where('cahaya', '<=', 0)
                 ->orWhere('suhu', '<=', 0);
-        })->where('created_at', '>=', $awalTgl)->where('created_at', '<=', $akhirTgl)->get();
+        })->WhereBetween('created_at', [$awalTgl, $akhirTgl])->get();
         // dd($sensor->count());
         $hariGagal = 0;
         $menitGagal = 0;
@@ -75,9 +77,6 @@ class AnalisisController extends Controller
 
         $opGagal = $totalJam - $menitGagal;
         $opS = $opGagal / $hariGagal;
-
-        // dd($menitGagal, $hariGagal);
-        //map
 
         return response()->json([
             // 'sensor' => $sensor,
