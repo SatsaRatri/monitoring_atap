@@ -8,11 +8,10 @@
             <div class="card-body col-md">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-8">
-                        <h1 class="text-primary">How can we help?</h1>
-                        <p class="lead mb-4">Search our knowledge base to find answers, or contact us directly if you're
-                            having issues!</p>
+                        <h1 class="text-primary">Apa itu Basis Pengetahuan? </h1>
+                        <p class="lead mb-4 justify-content-between">Istilah basis pengetahuan mengacu pada perpustakaan data di mana informasi dikumpulkan, diatur, dibagikan, dicari, dan digunakan. Basis pengetahuan dimaksudkan untuk bertindak sebagai sumber daya bagi pembaca. Basis pengetahuan disini berfungsi mengetahui apa saja alat yang digunakan dalam peneltian ini.</p>
                     </div>
-                    <div class="col-lg-4"><img class="img-fluid" src="{{ asset('template/img/problem-solving.svg') }}">
+                    <div class="col-lg-3"><img class="img-fluid" src="{{ asset('template/img/problem-solving.svg') }}">
                     </div>
                 </div>
             </div>

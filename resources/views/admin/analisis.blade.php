@@ -7,12 +7,15 @@
             <header class="card card-waves">
                 <div class="card-body col-md">
                     <div class="row align-items-center justify-content-between">
-                        <div class="col-lg-8">
-                            <h1 class="text-primary">How can we help?</h1>
-                            <p class="lead mb-4">Search our knowledge base to find answers, or contact us directly if you're
-                                having issues!</p>
+                        <div class="col-lg-9">
+                            <h1 class="text-primary">Apa itu Analisis Preventive Maintenance?</h1>
+                            <p class="lead mb-4">Tindakan preventive maintenance agar dapat meningkatkan kinerja dari perusahaan, untuk meminimalisir terjadinya breakdown dan downtime maka perlu adanya sistem penjadwalan perawatan yang baik guna mencegah terjadinya kerusakan mesin. Salah satu metode sebagai acuan untuk menetapkan jadwal perawatan yang efektif, yaitu :</p>
+                            <h4 class="text-primary lead mb-5">1. ANALISIS MEAN TIME TO REPAIR (MTTR)</h4>
+                            <h6 class="lead mb-4">Mean time to repair (MTTR) adalah jumlah rata-rata waktu yang diperlukan untuk memperbaiki sistem dan mengembalikannya ke fungsionalitas penuh. </h6>
+                            <h4 class="text-primary lead mb-5">2. MEAN TIME BETWEEN FAILURE (MTBF)</h4>
+                            <h6 class="lead mb-4">Waktu rata-rata antara kegagalan (MTBF) adalah waktu rata-rata yang dilalui antara kegagalan perangkat keras yang dapat diperbaiki dan waktu berikutnya terjadi. Ketersediaan dan keandalan alat ukur MTBF, sehingga semakin tinggi jumlah MTBF, semakin andal sistemnya.</h6>
                         </div>
-                        <div class="col-lg-4"><img class="img-fluid" src="{{ asset('template/img/problem-solving.svg') }}">
+                        <div class="col-lg-3"><img class="img-fluid" src="{{ asset('template/img/problem-solving.svg') }}">
                         </div>
                     </div>
                 </div>
@@ -93,22 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body col-md">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-3">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                                        style="text-align:center">Mean Time To Acknowledge (MTTA)</div>
-                                    <div class="mb-3">
-                                        <input class="form-control  col-md-15" id="inputnilai" name="nilai" type="text"
-                                            placeholder="Hasil MTTA">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </main>
