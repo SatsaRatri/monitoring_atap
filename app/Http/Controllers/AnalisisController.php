@@ -47,8 +47,8 @@ class AnalisisController extends Controller
     }
     //testing
     public function testing()
-    {        //mttr 7 hari suhu dan cahaya code
-        $awalTgl = '2022-11-01' . '00:00:00';
+    {        //mttr 30 hari suhu dan cahaya code
+        $awalTgl = '2022-11-07' . '00:00:00';
         $akhirTgl = '2022-11-07 ' . '23:59:59';
         $sensor = Sensor::where(function ($query) {
             $query->where('cahaya', '<=', 0)
@@ -73,6 +73,9 @@ class AnalisisController extends Controller
         $totalHari = $awalTgl->diffInDays($akhirTgl) + 1;
         $totalJam = $totalHari * $menit;
 
+        $opGagal = $totalJam - $menitGagal;
+        $opS = $opGagal / $hariGagal;
+
         // dd($menitGagal, $hariGagal);
         //map
 
@@ -81,7 +84,7 @@ class AnalisisController extends Controller
             'menitGagal' => $menitGagal,
             'hariGagal' => $hariGagal,
             'mttr' => $menitGagal / $hariGagal,
-            'mtbf' => $totalJam / $menitGagal,
+            'mtbf' => $opS,
         ]);
     }
 }
