@@ -29,7 +29,7 @@ class DataIotController extends Controller
         $sensor = new Sensor();
         $sensor->suhu = $request->get('suhu');
         $sensor->cahaya = $request->get('cahaya');
-        if ($request->get('suhu') < 26 && $request->get('cahaya') < 6000) {
+        if ($request->get('suhu') < 26 || $request->get('cahaya') < 6000) {
             $sensor->status = 'Tutup';
         } else {
             $sensor->status = 'Buka';
