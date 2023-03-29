@@ -18,4 +18,4 @@ use App\Http\Controllers\DataIotController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/', [DataIotController::class, 'datasensor'])->name('datasensor');
+Route::POST('/', [DataIotController::class, 'datasensor'])->name('datasensor');
