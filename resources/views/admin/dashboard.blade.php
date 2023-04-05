@@ -123,6 +123,134 @@
                 }
                 return s.join(dec);
             }
+            var ctx = document.getElementById("myAreaChart3");
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                            label: "Suhu",
+                            lineTension: 0.3,
+                            backgroundColor: "rgba(0,0,0,0)",
+                            borderColor: "rgba(0, 28, 255, 0.89)",
+                            pointRadius: 3,
+                            pointBackgroundColor: "rgba(61, 98, 235, 1)",
+                            pointBorderColor: "rgba(0, 28, 255, 0.89)",
+                            pointHoverRadius: 3,
+                            pointHoverBackgroundColor: "rgba(61, 98, 235, 1)",
+                            pointHoverBorderColor: "rgba(0, 28, 255, 0.89)",
+                            pointHitRadius: 10,
+                            pointBorderWidth: 2,
+                            data: [],
+                            //axes kanan
+                            yAxisID: 'y-axis-2',
+                        },
+                        {
+                            label: "Cahaya",
+                            lineTension: 0.3,
+                            backgroundColor: "rgba(0,0,0,0)",
+                            borderColor: "rgba(250, 201, 26, 0.89)",
+                            pointRadius: 3,
+                            pointBackgroundColor: "rgba(245, 204, 54, 0.36)",
+                            pointBorderColor: "rgba(250, 201, 26, 0.89)",
+                            pointHoverRadius: 3,
+                            pointHoverBackgroundColor: "rgba(245, 204, 54, 0.36)",
+                            pointHoverBorderColor: "rgba(250, 201, 26, 0.89)",
+                            pointHitRadius: 10,
+                            pointBorderWidth: 2,
+                            data: [],
+                            //axes kiri
+                            yAxisID: 'y-axis-1',
+                        }
+                    ],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 25,
+                            top: 25,
+                            bottom: 0
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            time: {
+                                unit: 'date'
+                            },
+                            gridLines: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 7
+                            }
+                        }],
+                        yAxes: [{
+                                position: "right",
+                                id: "y-axis-1",
+                                ticks: {
+                                    maxTicksLimit: 5,
+                                    padding: 10,
+                                    min: 0,
+                                    max: 15000,
+                                },
+                                gridLines: {
+                                    color: "rgb(234, 236, 244)",
+                                    zeroLineColor: "rgb(234, 236, 244)",
+                                    drawBorder: false,
+                                    borderDash: [2],
+                                    zeroLineBorderDash: [2]
+                                }
+                            },
+                            {
+                                position: "left",
+                                id: "y-axis-2",
+                                ticks: {
+                                    maxTicksLimit: 5,
+                                    padding: 10,
+                                    min: 0,
+                                    max: 40,
+                                },
+                                gridLines: {
+                                    color: "rgb(234, 236, 244)",
+                                    zeroLineColor: "rgb(234, 236, 244)",
+                                    drawBorder: false,
+                                    borderDash: [2],
+                                    zeroLineBorderDash: [2]
+                                }
+                            }
+                        ],
+                    },
+                    legend: {
+                        display: true
+                    },
+                    tooltips: {
+                        backgroundColor: "rgb(255,255,255)",
+                        bodyFontColor: "#858796",
+                        titleMarginBottom: 10,
+                        titleFontColor: '#6e707e',
+                        titleFontSize: 14,
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        intersect: false,
+                        mode: 'index',
+                        caretPadding: 10,
+                        callbacks: {
+
+                        }
+                    }
+                },
+
+            });
+
+            // //mengatur range y axis kiri
+            // myLineChart.options.scales.yAxes[0].ticks.min = 0;
+            // myLineChart.options.scales.yAxes[0].ticks.max = 15000;
 
             $.ajax({
                 url: '{{ route('datasensor.chart') }}',
@@ -133,126 +261,7 @@
                 },
                 success: function(data) {
                     console.log(data);
-                    var ctx = document.getElementById("myAreaChart3");
-                    var myLineChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: [],
-                            datasets: [{
-                                    label: "Suhu",
-                                    lineTension: 0.3,
-                                    backgroundColor: "rgba(0,0,0,0)",
-                                    borderColor: "rgba(0, 28, 255, 0.89)",
-                                    pointRadius: 3,
-                                    pointBackgroundColor: "rgba(61, 98, 235, 1)",
-                                    pointBorderColor: "rgba(0, 28, 255, 0.89)",
-                                    pointHoverRadius: 3,
-                                    pointHoverBackgroundColor: "rgba(61, 98, 235, 1)",
-                                    pointHoverBorderColor: "rgba(0, 28, 255, 0.89)",
-                                    pointHitRadius: 10,
-                                    pointBorderWidth: 2,
-                                    data: [],
-                                    //axes kanan
-                                    yAxisID: 'y-axis-2',
-                                },
-                                {
-                                    label: "Cahaya",
-                                    lineTension: 0.3,
-                                    backgroundColor: "rgba(0,0,0,0)",
-                                    borderColor: "rgba(250, 201, 26, 0.89)",
-                                    pointRadius: 3,
-                                    pointBackgroundColor: "rgba(245, 204, 54, 0.36)",
-                                    pointBorderColor: "rgba(250, 201, 26, 0.89)",
-                                    pointHoverRadius: 3,
-                                    pointHoverBackgroundColor: "rgba(245, 204, 54, 0.36)",
-                                    pointHoverBorderColor: "rgba(250, 201, 26, 0.89)",
-                                    pointHitRadius: 10,
-                                    pointBorderWidth: 2,
-                                    data: [],
-                                    //axes kiri
-                                    yAxisID: 'y-axis-1',
-                                }
-                            ],
-                        },
-                        options: {
-                            maintainAspectRatio: false,
-                            layout: {
-                                padding: {
-                                    left: 10,
-                                    right: 25,
-                                    top: 25,
-                                    bottom: 0
-                                }
-                            },
-                            scales: {
-                                xAxes: [{
-                                    time: {
-                                        unit: 'date'
-                                    },
-                                    gridLines: {
-                                        display: false,
-                                        drawBorder: false
-                                    },
-                                    ticks: {
-                                        maxTicksLimit: 7
-                                    }
-                                }],
-                                yAxes: [{
-                                        position: "right",
-                                        id: "y-axis-1",
-                                        ticks: {
-                                            maxTicksLimit: 5,
-                                            padding: 10,
-                                        },
-                                        gridLines: {
-                                            color: "rgb(234, 236, 244)",
-                                            zeroLineColor: "rgb(234, 236, 244)",
-                                            drawBorder: false,
-                                            borderDash: [2],
-                                            zeroLineBorderDash: [2]
-                                        }
-                                    },
-                                    {
-                                        position: "left",
-                                        id: "y-axis-2",
-                                        ticks: {
-                                            maxTicksLimit: 5,
-                                            padding: 10,
-                                        },
-                                        gridLines: {
-                                            color: "rgb(234, 236, 244)",
-                                            zeroLineColor: "rgb(234, 236, 244)",
-                                            drawBorder: false,
-                                            borderDash: [2],
-                                            zeroLineBorderDash: [2]
-                                        }
-                                    }
-                                ],
-                            },
-                            legend: {
-                                display: true
-                            },
-                            tooltips: {
-                                backgroundColor: "rgb(255,255,255)",
-                                bodyFontColor: "#858796",
-                                titleMarginBottom: 10,
-                                titleFontColor: '#6e707e',
-                                titleFontSize: 14,
-                                borderColor: '#dddfeb',
-                                borderWidth: 1,
-                                xPadding: 15,
-                                yPadding: 15,
-                                displayColors: false,
-                                intersect: false,
-                                mode: 'index',
-                                caretPadding: 10,
-                                callbacks: {
 
-                                }
-                            }
-                        },
-
-                    });
 
                     for (var i = 0; i < data.length; i++) {
                         //created_at ke tanggal dan waktu
